@@ -1,6 +1,6 @@
-<div class="form-group {{form.htmlClass}}"
+<div class="osc-form-control {{form.htmlClass}}"
      ng-class="{ '{{'schema-form-' + form.type}}': true, 'has-error': form.disableErrorState !== true && hasError(), 'has-success': form.disableSuccessState !== true && hasSuccess(), 'has-feedback': form.feedback !== false }">
-  <label class="control-label {{form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{form.key.slice(-1)[0]}}">{{form.title}}</label>
+  <label class="osc-form-control__label {{form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{form.key.slice(-1)[0]}}">{{form.title}}</label>
 
   <input ng-if="!form.fieldAddonLeft && !form.fieldAddonRight"
          ng-show="form.key"
@@ -8,7 +8,7 @@
          step="any"
          sf-changed="form"
          placeholder="{{form.placeholder}}"
-         class="form-control {{form.fieldHtmlClass}}"
+         class="osc-form-control__input {{form.key.slice(-1)[0]} {{form.fieldHtmlClass}}"
          id="{{form.key.slice(-1)[0]}}"
          sf-field-model
          ng-disabled="form.readonly"
@@ -26,7 +26,7 @@
            step="any"
            sf-changed="form"
            placeholder="{{form.placeholder}}"
-           class="form-control {{form.fieldHtmlClass}}"
+           class="osc-form-control__input {{form.key.slice(-1)[0]} {{form.fieldHtmlClass}}"
            id="{{form.key.slice(-1)[0]}}"
            sf-field-model
            ng-disabled="form.readonly"
